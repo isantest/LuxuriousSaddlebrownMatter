@@ -11,8 +11,17 @@ pygame.display.set_caption('Meu jogo')  # Define o titulo que aparecerá na jane
 
 #Função que sera o loop do jogo
 def gameLoop():
+    game_over = False
 
-  while True:
-    continue
+    #Loop principal que ira rodar o jogo
+    while not game_over:
+
+      for event in pygame.event.get():  #Captura as teclas que foram pressionadas
+
+        if event.type == pygame.QUIT: #Verifica se o evento foi para finalizar
+
+          game_over = True  #Marcamos que o jogo foi finalizado para sair do jogo
+
+    pygame.quit()
 
 gameLoop()
